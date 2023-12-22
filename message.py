@@ -20,8 +20,8 @@ def extract_data(output, username, password, backtime, index, searchword, header
         for i in range(count):
             # Use for HTML
             output += str(json_data_processed['hits']['hits'][i]['_source']['MESSAGE'])+"<br/>"+"\n"
-        #check if the output is null
-        if output == "":
+        #check if the output is not default
+        if output == "Please check the following AP's:<br>\n":
             print("Nothing to do ...")
             exit()
     else:
